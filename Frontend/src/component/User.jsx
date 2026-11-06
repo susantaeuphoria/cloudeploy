@@ -8,7 +8,7 @@ function User() {
   const navigate=useNavigate()
 
   const getapi = async () => {
-    const result = await axios.get("http://localhost:4500/");
+    const result = await axios.get("https://cloudeploy-7328.onrender.com/");
     console.log(result.data);
     setapi(result.data)
 
@@ -16,7 +16,7 @@ function User() {
 
   const deletefunction = async (id) => {
     console.log(id);
-    axios.delete("http://localhost:4500/delete/"+id); // send id in Backend
+    axios.delete("https://cloudeploy-7328.onrender.com/delete/"+id); // send id in Backend
     window.location.reload()
   }
 

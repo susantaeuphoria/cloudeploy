@@ -5,7 +5,11 @@ const cors = require("cors")
 
 
 const app = express()
-app.use(cors()) // middleware   connect to one domain to another domain 
+// app.use(cors()) // middleware   connect to one domain to another domain 
+app.use(cors({
+    origin: process.env.FRONTEND_URL,
+    credentials: true
+}));
 app.use(express.json())  // when send data from client side like (react js)
 
 // mongo connection -------
@@ -65,7 +69,7 @@ app.put("/update/:id", (req, res) => {
         .then((re) => res.json(re))
         .catch((error) => res.json(error))
 })
-const port=process.env.PORT || 5000
+const port = process.env.PORT || 5000
 app.listen(port, () => {
     console.log("Server is running on 4500 port");
 })

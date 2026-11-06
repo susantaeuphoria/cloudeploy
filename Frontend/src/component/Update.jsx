@@ -11,7 +11,7 @@ function Update() {
   const navigate = useNavigate()
 
   const handelgetdata = async () => {
-    const data = await axios.get("http://localhost:4500/getdata/" + id);
+    const data = await axios.get("https://cloudeploy-7328.onrender.com/getdata/" + id);
     console.log(data.data);
     setname(data.data.name)
     setemail(data.data.email)

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios"
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Create() {
   const [name,setname]=useState("")
@@ -11,13 +11,14 @@ function Create() {
 
   const handelsubmit=async(e)=>{
     e.preventDefault()
-    await axios.post("http://localhost:4500/create",{name,email,number})
+    await axios.post("https://cloudeploy-7328.onrender.com/create",{name,email,number})
     navigate("/")
   }
 
 
   return (  
     <div>
+      <Link to={"/create"}>Create</Link>
       <form action="" onSubmit={handelsubmit}>
         <p>
           Name:
