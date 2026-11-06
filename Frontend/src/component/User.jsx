@@ -1,6 +1,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function User() {
   const [api, setapi] = useState([])
@@ -29,6 +29,7 @@ function User() {
   }, [])
 
   return <div>
+     <Link to={"/create"}>Create</Link>
     <table border={1}>
       <tr>
         <th>Name</th>

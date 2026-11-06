@@ -18,7 +18,7 @@ function Create() {
 
   return (  
     <div>
-      <Link to={"/create"}>Create</Link>
+     
       <form action="" onSubmit={handelsubmit}>
         <p>
           Name:
