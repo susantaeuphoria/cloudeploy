@@ -22,7 +22,7 @@ function Update() {
     console.log("hello");
 
     e.preventDefault()
-    const data = await axios.put("http://localhost:4500/update/" + id, {
+    const data = await axios.put("https://cloudeploy-7328.onrender.com/update/" + id, {
       name, email, number
     });
 
